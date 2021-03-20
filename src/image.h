@@ -78,6 +78,9 @@ void show_image_collapsed(image p, char *name);
 void print_image(image m);
 
 //LIB_API image make_image(int w, int h, int c);
+
+batch_image make_batch_image(int batch, int w, int h, int c);
+
 image make_random_image(int w, int h, int c);
 image make_empty_image(int w, int h, int c);
 image float_to_image_scaled(int w, int h, int c, float *data);

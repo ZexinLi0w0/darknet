@@ -2038,10 +2038,11 @@ void run_detector(int argc, char **argv)
             demo(cfg, weights, thresh, hier_thresh, cam_index, filename, names, classes, avgframes, frame_skip, prefix, out_filename,
             mjpeg_port, dontdraw_bbox, json_port, dont_show, ext_output, letter_box, time_limit_sec, http_post_host, benchmark, benchmark_layers);
 
+/*  multi-threading for multi-input
         for (int i = 0; i < data_fusion; i++)
             demo(cfg, weights, thresh, hier_thresh, cam_index, filename, names, classes, avgframes, frame_skip, prefix, out_filename,
             mjpeg_port, dontdraw_bbox, json_port, dont_show, ext_output, letter_box, time_limit_sec, http_post_host, benchmark, benchmark_layers);
-        
+ */       
         free_list_contents_kvp(options);
         free_list(options);
     }

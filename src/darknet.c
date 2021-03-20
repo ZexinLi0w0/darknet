@@ -95,7 +95,8 @@ void speed(char *cfgfile, int tics)
     set_batch_network(&net, 1);
     int i;
     time_t start = time(0);
-    image im = make_image(net.w, net.h, net.c);
+    int batch = 1;
+    image im = make_batch_image(batch, net.w, net.h, net.c);
     for(i = 0; i < tics; ++i){
         network_predict(net, im.data);
     }

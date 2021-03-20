@@ -856,6 +856,14 @@ typedef struct image {
     float *data;
 } image;
 
+typedef struct batch_image {
+    int batch;
+    int w;
+    int h;
+    int c;
+    float *data;
+} batch_image;
+
 //typedef struct {
 //    int w;
 //    int h;

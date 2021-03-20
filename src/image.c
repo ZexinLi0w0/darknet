@@ -798,6 +798,18 @@ image make_image(int w, int h, int c)
     return out;
 }
 
+batch_image make_batch_image(int batch, int w, int h, int c)
+{
+    batch_image out;
+    out.data = 0;
+    out.h = h;
+    out.w = w;
+    out.c = c;
+    out.batch = batch;
+    out.data = (float*)xcalloc(batch * h * w * c, sizeof(float));
+    return out;
+}
+
 image make_random_image(int w, int h, int c)
 {
     image out = make_empty_image(w,h,c);
